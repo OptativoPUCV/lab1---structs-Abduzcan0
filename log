@@ -20,3 +20,21 @@ Wed 15 Mar 2023 06:31:51 PM UTC:
  tests:  4|3
 total_score: 40/70
 6999280
+Wed 15 Mar 2023 10:27:04 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:83:39: error: ‘Vectorector’ undeclared (first use in this function)
+   83 |    Vector *aux=(Vector*)calloc(sizeof(Vectorector));
+      |                                       ^~~~~~~~~~~
+exercises.c:83:39: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:83:25: error: too few arguments to function ‘calloc’
+   83 |    Vector *aux=(Vector*)calloc(sizeof(Vectorector));
+      |                         ^~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:543:14: note: declared here
+  543 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+Compilation failed
+c1bd85f
