@@ -83,6 +83,8 @@ Vector * crearVector(int n) {
   Vector *aux=(Vector*)malloc(n*sizeof(Vector));
   if(aux==NULL)exit(EXIT_FAILURE);
   aux->datos=(int*)calloc(n,sizeof(int));
+  if(aux->datos==NULL)exit(EXIT_FAILURE);
+  aux->capacidad=n;
   return aux;
 }
 
